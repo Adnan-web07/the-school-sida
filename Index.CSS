@@ -1,14 +1,77 @@
+html{
+background: #bdffbf;
+background: linear-gradient(360deg,#b5ffb5 0%, rgba(217, 246, 216, 1) 81%, rgba(240, 235, 235, 1) 100%);
+height: 100%;
+margin: 0;
+}
+
+
+.container {
+  display: grid;
+  height: 400px; 
+  gap: 6px;
+  grid-template-columns: 3fr 1fr; 
+  grid-template-rows: 1fr 4fr 1fr 1fr; 
+  max-width: 600px;
+  margin: 0 auto;
+  grid-template-areas:
+    "header header"
+    "left right"
+    "footer footer";
+}
+
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 130px;
-  background-color: #f1f1f1;
-  height: 100%; /* Full height */
-  position: fixed; /* Make it stick, even on scroll */
-  overflow: auto; /* Enable scrolling if the sidenav has too much content */
+  width: 100px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
 }
 
-header{
-    text-align: justify;
+li a {
+  display: block;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555555;
+  color: white;
+}
+
+header {
+  grid-area: header;
+  background-color: #c9c1f7; 
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.left {
+  grid-area: left;
+  background-color: #e5c4e9; 
+  margin-left: 20px;
+  font-size: 12px;
+}
+
+.right {
+  grid-area: right;
+  background-color: #ececec; 
+  margin-right: 20px;
+  font-size: 7px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #d6b1b1; 
+  text-align: center;
 }
