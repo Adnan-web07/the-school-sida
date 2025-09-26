@@ -1,9 +1,18 @@
 body{
-backgroung: linear-gradient(to bottom, rgb(231, 203, 157), rgb(65, 56, 43));
+background: linear-gradient(to bottom, rgb(231, 203, 157), rgb(65, 56, 43));
 }
 
 .layout{
     row;
+}
+
+h6{
+ align-text: center;
+ font-size: 10px;
+}
+
+p{
+ 
 }
 
 header{
