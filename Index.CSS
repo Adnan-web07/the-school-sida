@@ -16,35 +16,52 @@ margin: 0;
     'header header header header header header'
     'menu menu main main main main'
     'menu menu footer footer footer footer';
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 120px 450px 220px;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .grid-container > div {
   background-color: #f1f1f1;
   color:#000;
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 10px;
-  font-size: 20px;
+  padding: 15px;
+  font-size: 18px;
   text-align: center;
   font-weight: bold;
-  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.item1 { grid-area: header; 
-  
-  height: 100px;
-}
-.item2 {   grid-area: menu; 
-
-  height: 422px;
-}
-.item3 { grid-area: main; 
-  
-  height: 200px;
+.item1 { 
+  grid-area: header;
+  align-items: center;
+  justify-content: center;
 }
 
-.item5 { grid-area: footer;
- 
-  height: 200px;
+.item2 { 
+  grid-area: menu;
+  text-align: left;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.item3 { 
+  grid-area: main;
+  align-items: center;
+  justify-content: center;
+}
+
+.item5 { 
+  grid-area: footer;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -81,6 +98,42 @@ li a:hover:not(.active) {
 }
 
 p{
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
+  line-height: 1.4;
+  margin: 10px 0;
+}
+
+/* Specific styling for menu content */
+.item2 p {
+  text-align: left;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 8px 0;
+}
+
+/* Ensure content doesn't break layout */
+.grid-container > div h1,
+.grid-container > div h2,
+.grid-container > div h3 {
+  margin: 0 0 10px 0;
+  word-wrap: break-word;
+}
+
+/* Scrollbar styling for overflow content */
+.item2::-webkit-scrollbar {
+  width: 8px;
+}
+
+.item2::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.item2::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.item2::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
