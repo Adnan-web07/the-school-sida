@@ -10,7 +10,7 @@
   display: grid;
   grid-template-areas:
     'header header header header header header'
-    'menu menu main main main main'
+    'menu menu main main main main '
     'menu menu footer footer footer footer';
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 90px 300px 100px;
@@ -40,7 +40,7 @@ body.page-contact .grid-container {
 body.page-info .grid-container {
   grid-template-areas:
     'header header header header header header'
-    'main main main main main main'
+    'right right main main main main main main'
     'footer footer footer footer footer footer';
   grid-template-rows: 90px 300px 100px;
 }
@@ -149,7 +149,7 @@ p{
   margin: 10px 0;
 }
 
-img {
+.nonimgage {
   max-width: 100%;
   align-items: center;
   height: auto;
@@ -183,11 +183,21 @@ body.page-info {
   background: linear-gradient(360deg,#f2ccff 0%, #d79cff 60%, #b86aff 100%);
   min-height: 100vh;
   margin: 0;
+}¨
+
+.kevin{
+  width: 100%;
+  align-items: center;
+  height: auto;
+  border-radius: px;
+  margin: 0 auto;
+  height: 10px;
+  width: auto;
 }
 
 .itemspecial{
   font-size: larger;
-  align-items: left;
+  align-items:left;
   grid-area: footer;
   justify-content: center;
 }
