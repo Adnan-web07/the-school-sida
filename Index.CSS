@@ -39,10 +39,10 @@ body.page-contact .grid-container {
 
 body.page-info .grid-container {
   grid-template-areas:
-    'header header header header header header'
-    'right right main main main main main main'
-    'footer footer footer footer footer footer';
-  grid-template-rows: 90px 300px 100px;
+    "header header header header header header"
+    "main   main   main   main   menu   menu"
+    "main   main   main   main   menu   menu";
+  grid-template-rows: auto auto auto;
 }
 
 
@@ -111,13 +111,37 @@ background: linear-gradient(180deg,rgba(255, 255, 255, 1) 41%, rgba(242, 186, 25
 
 ul {
   list-style-type: none;
-  margin: -20px;
-  padding: 10px;
-  width: 90px;
+  margin: 0;
+  padding: 0.5rem;
+  width: 11rem;
 
   height: 100%;
   overflow: auto;
   margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  .grid-container {
+    grid-template-areas:
+      'header'
+      'main'
+      'menu'
+      'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  ul {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+  }
+
+  li a {
+    padding: 0.5rem 0.75rem;
+    white-space: nowrap;
+  }
 }
 
 li a {
@@ -141,12 +165,17 @@ li a:hover:not(.active) {
   text-align: center;
   font-size: 20px;
 }
+.looker-item h1 {
+  font-size: clamp(1.5rem, 2.5vw + 1rem, 2.5rem);
+  line-height: 1.2;
+  margin: 0.5rem 0 1rem;
+}
 
 p{
-  font-size: 18px;
-  text-align: center;
-  line-height: 1.4;
-  margin: 10px 0;
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.6;
+  margin: 0.75rem 0;
 }
 
 .nonimgage {
@@ -183,16 +212,15 @@ body.page-info {
   background: linear-gradient(360deg,#f2ccff 0%, #d79cff 60%, #b86aff 100%);
   min-height: 100vh;
   margin: 0;
-}¨
+}
 
 .kevin{
-  width: 100%;
-  align-items: center;
+  display: block;
+  max-width: 100%;
+  width: clamp(220px, 40vw, 420px);
   height: auto;
-  border-radius: px;
+  border-radius: 8px;
   margin: 0 auto;
-  height: 10px;
-  width: auto;
 }
 
 .itemspecial{
