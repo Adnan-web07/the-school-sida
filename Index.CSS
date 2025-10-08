@@ -2,32 +2,32 @@
 
 
 .topnav{
- margin-left: 100px;
- max-width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 .grid-container {
   display: grid;
   grid-template-areas:
     'header header header header header header'
-    'menu menu main main main main '
+    'menu menu main main main main'
     'menu menu footer footer footer footer';
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 110px 340px 110px;
-  gap: 5px;
+  /* Use 6 equal columns to match the 6 cells in each grid-template-areas row */
+  grid-template-columns: repeat(6, 1fr);
+  /* Three rows to match the three area rows */
+  grid-template-rows: 90px auto auto;
+  gap: 10px;
   width: 100%;
-  max-width: 95%;
+  max-width: 1200px;
+  margin: 12px auto;
+  padding: 0 16px;
   box-sizing: border-box;
-  margin-left: 70px;
 }
 
 
-body.page-news .grid-container {
-  grid-template-areas:
-    'header header header header header header'
-    'footer footer footer footer footer footer';
-  grid-template-rows: 90px 300px 100px;
-}
+
+
 
 /*
 body.page-contact .grid-container {
@@ -38,13 +38,6 @@ body.page-contact .grid-container {
   grid-template-rows:  90px 300px 100px;
 }*/
 
-body.page-info .grid-container {
-  grid-template-areas:
-    "header header header header menu menu"
-    "main   main   main   main   menu   menu"
-    "main   main   main   main   menu   menu";
-  grid-template-rows: 100px  100px;
-}
 
 
 
@@ -52,8 +45,6 @@ body.page-info .grid-container {
   background: #ffffff;
   background: linear-gradient(180deg,rgba(255, 255, 255, 1) 41%, rgba(212, 255, 231, 1) 100%);
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 15px;
-  font-size: 18px;
   text-align: center;
   box-sizing: border-box;
   overflow: hidden;
@@ -61,6 +52,7 @@ body.page-info .grid-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding: 16px;
 }
 
 
@@ -81,46 +73,79 @@ body.page-contact .grid-container > div {
 */
 
 body.page-info .grid-container > div {
-  background: #ffffff;
-background: linear-gradient(180deg,rgba(255, 255, 255, 1) 41%, rgba(242, 186, 255, 1) 100%);
+background: #ffffff;
+background: linear-gradient(180deg,rgba(255, 255, 255, 0.52) 0%, rgba(247, 205, 255, 1) 47%, rgba(255, 255, 255, 0.56) 100%);
+
 }
+
+
+
 
 
 .item1 { 
   grid-area: header;
   align-items: center;
   justify-content: center;
+  font-size: 20px;
+  
+  
 }
+
 
 .item2 { 
   grid-area: menu;
   text-align: left;
   padding: 20px;
-  overflow-y: auto;
+  
+}
+.itemboll{
+ grid-area: header;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  padding: 25px;
+  
+
 }
 
 .item3 { 
   grid-area: main;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+
+.kevin3 { 
+  grid-area: main;
   align-items: left;
   justify-content: center;
+  font-size: 20px;
 }
+
 
 .item5 { 
   grid-area: footer;
   align-items: center;
   justify-content: center;
+  font-size: 18px;
 }
 
 
 ul {
-  list-style-type: none;
+  list-style: none;
   margin: 0;
-  padding: 0.5rem;
-  width: 11rem;
-
-  height: 100%;
-  overflow: auto;
-  margin-top: 0;
+  padding: 8px 16px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 @media (max-width: 700px) {
@@ -144,6 +169,7 @@ ul {
   li a {
     padding: 0.5rem 0.75rem;
     white-space: nowrap;
+    font-size: 18px;
   }
 }
 
@@ -152,22 +178,25 @@ li a {
   color: black;
   padding: 10px 16px;
   text-decoration: none;
+  border-radius: 9999px;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
 }
 
 li a.active {
   background-color: #04AA6D;
   color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 li a:hover:not(.active) {
-  background-color: #555555;
-  color: white;
+  background-color: rgba(4, 170, 109, 0.2);
+  color: #064e3b;
 }
 
 .looker-item{
   text-align: center;
-  background: #d4cfcf;
-  background: radial-gradient(circle,rgba(255, 255, 255, 0.61) 8%, rgba(209, 255, 199, 0.26) 100%);
+  background: #ffffff;
+  background: radial-gradient(circle,rgba(255, 255, 255, 0.6) 56%, rgba(246, 199, 255, 0) 100%);
   font-size: 30px;
   background-color:  rgba(238, 255, 205, 0.312);
   border: 5px solid rgb(209, 225, 182); 
@@ -180,42 +209,10 @@ li a:hover:not(.active) {
   padding: 10px;
   display: block;           
   margin: 5px auto;  
-  width: 600px;
+  width: clamp(320px, 60vw, 600px);
 }
 
-.looker-item3{
-  text-align: center;
-  font-size: 30px;
-  background-color:  rgba(138, 145, 124, 0.312);
-  border: 5px solid rgba(65, 68, 60, 0.534); 
-  border-radius: 30px;
-  margin-top:  auto;
-  font-family: 'Courier New', Courier, monospace;
-  border: 10px ;
-  border-radius: 20px;
-  padding: 5px;
-  display: block;           
-  margin: 5px auto;  
-  width: 500px;
 
-}
-
-.looker-item2{
-  text-align: center;
-   font-size: 30px;
-  background-color:  rgba(238, 255, 205, 0.312);
-  border: 5px solid rgba(209, 225, 182, 0.445); 
-  border-radius: 30px;
-  margin-top:  auto;
-  font-family: 'Courier New', Courier, monospace;
-  border: 10px ;
-  border-radius: 20px;
-  padding: 10px;
-  display: block;           
-  margin: 5px auto;  
-  width: 500px;
-
-}
 
 .prabbti2{
   background-color:  rgba(238, 255, 205, 0.312);
@@ -272,16 +269,38 @@ body.page-info {
 
 .kevin{
   display: block;
-  max-width: 70%;
-  width: clamp(220px, 40vw, 420px);
+  width: 100%;
+  max-width: 100%;
   height: auto;
   border-radius: 8px;
   margin: 0 auto;
 }
 
-.itemspecial{
-  font-size: larger;
-  align-items:left;
-  grid-area: footer;
-  justify-content: center;
+
+/* Page-specific grid layouts to match actual content on each page */
+body.page-index .grid-container {
+  grid-template-areas:
+    'header header header header header header'
+    'menu menu main main main main'
+    'menu menu footer footer footer footer';
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 90px auto auto;
+}
+
+body.page-info .grid-container {
+  grid-template-areas:
+    'header header header header header header'
+    'menu menu main main main main'
+    'menu menu footer footer footer footer';
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 90px auto auto;
+}
+
+body.page-news .grid-container {
+  grid-template-areas:
+    'header header header header header header'
+    'menu menu main main main main'
+    'menu menu footer footer footer footer';
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 90px auto auto;
 }
