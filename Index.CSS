@@ -13,8 +13,8 @@
     'menu menu main main main main '
     'menu menu footer footer footer footer';
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 70px 300px 100px;
-  gap: 10px;
+  grid-template-rows: 90px 300px 100px;
+  gap: 5px;
   width: 100%;
   max-width: 95%;
   box-sizing: border-box;
@@ -164,16 +164,19 @@ li a:hover:not(.active) {
   color: white;
 }
 
-.looker-item {
+.looker-item{
   text-align: center;
-  font-size: 20px;
-  margin-left: 70px;
+  background: #d4cfcf;
+  background: radial-gradient(circle,rgba(212, 207, 207, 0.61) 8%, rgba(209, 255, 199, 0.26) 100%);
+  font-size: 8px;
+  border: 10px ;
+  border-radius: 60px;
+  padding: 10px;
+  display: table;           
+  margin: 5px auto;  
+  width: 900px;
 }
-.looker-item h1 {
-  font-size: clamp(1.5rem, 2.5vw + 1rem, 2.5rem);
-  line-height: 1.2;
-  margin: 0.5rem 0 1rem;
-}
+
 
 p{
   font-size: 1rem;
@@ -206,11 +209,12 @@ body.page-news {
   margin: 0;
 }
 
+/*
 body.page-contact {
   background: linear-gradient(360deg,#ffe1bf 0%, #ffc08a 60%, #ff9a57 100%);
   min-height: 100vh;
   margin: 0;
-}
+}*/
 
 body.page-info {
   background: linear-gradient(360deg,#7f6189 0%, #d79cff 60%, #b86aff 100%);
