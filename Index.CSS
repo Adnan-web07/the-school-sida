@@ -13,7 +13,7 @@
     'menu menu main main main main '
     'menu menu footer footer footer footer';
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 90px 300px 100px;
+  grid-template-rows: 110px 340px 110px;
   gap: 5px;
   width: 100%;
   max-width: 95%;
@@ -167,23 +167,71 @@ li a:hover:not(.active) {
 .looker-item{
   text-align: center;
   background: #d4cfcf;
-  background: radial-gradient(circle,rgba(212, 207, 207, 0.61) 8%, rgba(209, 255, 199, 0.26) 100%);
-  font-size: 8px;
+  background: radial-gradient(circle,rgba(255, 255, 255, 0.61) 8%, rgba(209, 255, 199, 0.26) 100%);
+  font-size: 30px;
+  background-color:  rgba(238, 255, 205, 0.312);
+  border: 5px solid rgb(209, 225, 182); 
+  border-radius: 30px;
+  margin: 12px auto;
+  margin-top:  auto;
+  font-family: 'Courier New', Courier, monospace;
   border: 10px ;
-  border-radius: 60px;
+  border-radius: 40px;
   padding: 10px;
-  display: table;           
+  display: block;           
   margin: 5px auto;  
-  width: 900px;
+  width: 600px;
+}
+
+.looker-item3{
+  text-align: center;
+  font-size: 30px;
+  background-color:  rgba(138, 145, 124, 0.312);
+  border: 5px solid rgba(65, 68, 60, 0.534); 
+  border-radius: 30px;
+  margin-top:  auto;
+  font-family: 'Courier New', Courier, monospace;
+  border: 10px ;
+  border-radius: 20px;
+  padding: 5px;
+  display: block;           
+  margin: 5px auto;  
+  width: 500px;
+
+}
+
+.looker-item2{
+  text-align: center;
+   font-size: 30px;
+  background-color:  rgba(238, 255, 205, 0.312);
+  border: 5px solid rgba(209, 225, 182, 0.445); 
+  border-radius: 30px;
+  margin-top:  auto;
+  font-family: 'Courier New', Courier, monospace;
+  border: 10px ;
+  border-radius: 20px;
+  padding: 10px;
+  display: block;           
+  margin: 5px auto;  
+  width: 500px;
+
+}
+
+.prabbti2{
+  background-color:  rgba(238, 255, 205, 0.312);
+  border: 5px solid rgba(209, 225, 182, 0.253); 
+  font-size: 15px;
+  border-radius: 30px;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  font-family: 'Courier New', Courier, monospace;
+  max-width: 50%;
+  margin: 12px auto;
 }
 
 
-p{
-  font-size: 1rem;
-  text-align: left;
-  line-height: 1.6;
-  margin: 0.75rem 0;
-}
+
 
 .nonimgage {
   max-width: 100%;
@@ -236,27 +284,4 @@ body.page-info {
   align-items:left;
   grid-area: footer;
   justify-content: center;
-}
-
-.prabbti{
-  font-size: 20px;
-  background-color:  rgba(238, 255, 205, 0.312);
-  border: 5px solid rgb(209, 225, 182); 
-  border-radius: 30px;
-  text-align: center;
-  padding: 10px;
-  display: block;
-  max-width: 50%;
-  margin: 12px auto;
-  font-family: 'Courier New', Courier, monospace;
-} 
-
-.prabbti2{
-  background-color:  rgba(238, 255, 205, 0.312);
-  border: 5px solid rgb(209, 225, 182); 
-  border-radius: 30px;
-  text-align: center;
-  padding: 10px;
-  display: flex;
-  font-family: 'Courier New', Courier, monospace;
 }
