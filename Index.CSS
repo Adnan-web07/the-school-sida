@@ -27,7 +27,7 @@
 
 
 
-/*
+/* its for the fourth html dw about it
 body.page-contact .grid-container {
   grid-template-areas:
     'header header header header header header'
@@ -63,7 +63,7 @@ body.page-news .grid-container > div {
 
 }
 
-/*
+/* its for the fourth html dw about it
 body.page-contact .grid-container > div {
   background: #ffffff;
   background: linear-gradient(180deg,rgba(255, 255, 255, 1) 41%, rgba(255, 240, 186, 1) 100%);
@@ -252,7 +252,7 @@ body.page-news {
   margin: 0;
 }
 
-/*
+/* its for the fourth html dw about it
 body.page-contact {
   background: linear-gradient(360deg,#ffe1bf 0%, #ffc08a 60%, #ff9a57 100%);
   min-height: 100vh;
