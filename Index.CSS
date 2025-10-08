@@ -13,9 +13,7 @@
     'header header header header header header'
     'menu menu main main main main'
     'menu menu footer footer footer footer';
-  /* Use 6 equal columns to match the 6 cells in each grid-template-areas row */
   grid-template-columns: repeat(6, 1fr);
-  /* Three rows to match the three area rows */
   grid-template-rows: 90px auto auto;
   gap: 10px;
   width: 100%;
@@ -277,7 +275,6 @@ body.page-info {
 }
 
 
-/* Page-specific grid layouts to match actual content on each page */
 body.page-index .grid-container {
   grid-template-areas:
     'header header header header header header'
